@@ -2,11 +2,23 @@
 /* font-family: 'Playfair Display', serif;
 font-family: 'Poppins', sans-serif; */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     text-rendering: optimizeLegibility !important;
     background: #f3f3f5;
 }
+
+.thumbnail-image {
+    width: 80px; /* Atur lebar gambar thumbnail */
+    height: 70px; /* Biarkan tinggi gambar disesuaikan dengan lebar agar proporsi gambar tetap terjaga */
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
 
 .body-fixed {
     position: fixed;
@@ -520,8 +532,8 @@ ul {
 }
 
 .h1-title {
-    font-size: 90px;
-    line-height: 108px;
+    font-size: 30px;
+    line-height: 80px;
     text-transform: capitalize;
     margin-bottom: 25px;
     font-weight: 900;
@@ -585,11 +597,18 @@ p {
 }
 
 .brands-box {
-    padding: 0 15px;
+    /* padding: 0 15px; */
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 50%;
+    /* animation: marquee 5s linear infinite */
 }
+
+/* @keyframes marquee {
+    0% { transform: translateX(0); } 
+    100% { transform: translateX(-100%); } 
+} */
 
 .brands-box:hover {
     filter: brightness(0.3);
@@ -1371,11 +1390,11 @@ p {
 }
 
 .footer-logo {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .footer-info .social-icon {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .footer-flex-box {
@@ -1466,7 +1485,7 @@ p {
 
 @media (max-width: 1399px) {
     .h1-title {
-        font-size: 80px;
+        font-size: 50px;
         line-height: 90px;
     }
     .h3-title {
@@ -1566,7 +1585,7 @@ p {
         padding: 140px 0 60px;
     }
     .h1-title {
-        font-size: 60px;
+        font-size: 50px;
         line-height: 80px;
     }
     .banner-img-wp {
@@ -1575,7 +1594,8 @@ p {
         padding-top: 50px;
     }
     .brands-box {
-        padding: 0 30px;
+        /* padding: 0 30px; */
+        width: 50%;
     }
     .brands-row {
         margin: 0 -30px;
@@ -1728,7 +1748,8 @@ p {
         font-size: 14px;
     }
     .brands-box {
-        padding: 0 25px;
+        /* padding: 0 25px; */
+        width: 70%;
     }
     .brands-row {
         margin: 0 -25px;
@@ -1759,7 +1780,7 @@ p {
         border-radius: 30px;
     }
     .brands-box {
-        padding: 0 15px;
+        /* padding: 0 15px; */
         flex: 0 0 33%;
         margin-bottom: 30px;
     }
@@ -1848,3 +1869,18 @@ p {
         padding: 20px;
     }
 }
+
+ @media screen and (max-width: 1024px) {
+        iframe, p {
+            max-width: 600px; /* Lebar maksimum di tablet */
+            /* height: 450px; */
+        }
+    }
+
+    /* Gaya untuk ponsel */
+    @media screen and (max-width: 600px) {
+        iframe, p {
+            max-width: 300px; /* Lebar maksimum di ponsel */
+            /* height: 225px; */
+        }
+    }
