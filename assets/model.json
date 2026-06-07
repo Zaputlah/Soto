@@ -1,0 +1,174 @@
+{
+  "name": "warung-soto-model",
+  "version": "1.0",
+  "info": {
+    "nama": "Soto Ayam Salimnur",
+    "deskripsi": "Soto Ayam Salimnur adalah warung makan di Pondok Ungu Permai, Bekasi. Menu utamanya adalah soto ayam dengan pilihan telur atau ceker. Warung ini juga menyediakan sate, ayam, lele, jus, serta minuman hangat dan dingin.",
+    "pemilik": "Reza Putra Fadilah",
+    "instagram_warung": null,
+    "instagram_pemilik": "@zaputlah",
+    "instagram_url": "https://www.instagram.com/zaputlah/",
+    "alamat": "Pondok Ungu permai, Bekasi Utara, Jawa Barat",
+    "maps_url": "https://www.google.com/maps/dir/?api=1&destination=-6.175392093812001,107.00696287498992&travelmode=driving",
+    "hari_buka": "Senin-Jumat dan Minggu",
+    "hari_libur": "Sabtu",
+    "jam_buka": "07:30 - 17:00",
+    "zona_waktu": "Asia/Jakarta",
+    "jadwal": {
+      "senin": "07:30 - 17:00",
+      "selasa": "07:30 - 17:00",
+      "rabu": "07:30 - 17:00",
+      "kamis": "07:30 - 17:00",
+      "jumat": "07:30 - 17:00",
+      "sabtu": "Libur",
+      "minggu": "07:30 - 17:00"
+    },
+    "kontak": "+62 858-1104-3930",
+    "layanan_pesan": "Pemesanan tersedia melalui GoFood, GrabFood, WhatsApp, atau datang langsung ke warung.",
+    "menu_andalan": [
+      "Soto Ayam Telur Setengah",
+      "Soto Ayam Telur Full",
+      "Soto Ayam Ceker"
+    ],
+    "promo": "Menu Jumat Berkah tersedia dengan harga online Rp 10.000. Untuk promo lainnya, silakan konfirmasi langsung ke warung.",
+    "promo_hari": "Jumat",
+    "keterangan": "Menu andalan: Soto Ayam, Sate, Minuman Hangat/Dingin. Pesan via GoFood/Grab atau datang langsung."
+  },
+  "menu": [
+    {
+      "nama": "Soto Ayam Telur Setengah",
+      "harga_online": "Rp 18.800",
+      "kategori": "Soto dan sate"
+    },
+    {
+      "nama": "Soto Ayam Telur Full",
+      "harga_online": "Rp 23.800",
+      "kategori": "Soto dan sate"
+    },
+    {
+      "nama": "Soto Ayam Ceker",
+      "harga_online": "Rp 9.000",
+      "kategori": "Soto dan sate"
+    },
+    {
+      "nama": "Sate Ampela",
+      "harga_online": "Rp 5.000",
+      "kategori": "Soto dan sate"
+    },
+    {
+      "nama": "Sate Ati",
+      "harga_online": "Rp 5.000",
+      "kategori": "Soto dan sate"
+    },
+    {
+      "nama": "Sate Telur Puyuh",
+      "harga_online": "Rp 5.000",
+      "kategori": "Soto dan sate"
+    },
+    {
+      "nama": "Sate Usus",
+      "harga_online": "Rp 5.000",
+      "kategori": "Soto dan sate"
+    },
+    {
+      "nama": "Ayam Goreng",
+      "harga_online": "Rp 20.000",
+      "kategori": "Makanan"
+    },
+    { "nama": "Ayam Bakar", "harga_online": "Rp 4.500", "kategori": "Makanan" },
+    {
+      "nama": "Lele Goreng",
+      "harga_online": "Rp 10.000",
+      "kategori": "Makanan"
+    },
+    {
+      "nama": "Lele Bakar",
+      "harga_online": "Rp 10.000",
+      "kategori": "Makanan"
+    },
+    {
+      "nama": "Jumat Berkah",
+      "harga_online": "Rp 10.000",
+      "kategori": "Makanan"
+    },
+    {
+      "nama": "Es Teh",
+      "harga_online": "Rp 12.000",
+      "kategori": "Minuman dingin"
+    },
+    {
+      "nama": "Es Good Day Mocacino",
+      "harga_online": "Rp 7.000",
+      "kategori": "Minuman dingin"
+    },
+    {
+      "nama": "Es Good Day Freez",
+      "harga_online": "Rp 3.500",
+      "kategori": "Minuman dingin"
+    },
+    {
+      "nama": "Jus Alpukat",
+      "harga_online": "Rp 6.500",
+      "kategori": "Minuman dingin"
+    },
+    {
+      "nama": "Jus Jambu",
+      "harga_online": "Rp 11.000",
+      "kategori": "Minuman dingin"
+    },
+    {
+      "nama": "Jus Lemon",
+      "harga_online": "Rp 10.000",
+      "kategori": "Minuman dingin"
+    },
+    {
+      "nama": "Jus Mangga",
+      "harga_online": "Rp 18.000",
+      "kategori": "Minuman dingin"
+    },
+    {
+      "nama": "Jus Melon",
+      "harga_online": "Rp 14.000",
+      "kategori": "Minuman dingin"
+    },
+    {
+      "nama": "Jus Naga",
+      "harga_online": "Rp 16.000",
+      "kategori": "Minuman dingin"
+    },
+    {
+      "nama": "Jus Nanas",
+      "harga_online": "Rp 17.000",
+      "kategori": "Minuman dingin"
+    },
+    {
+      "nama": "Jus Sirsak",
+      "harga_online": "Rp 19.000",
+      "kategori": "Minuman dingin"
+    },
+    {
+      "nama": "Jus Strawberry",
+      "harga_online": "Rp 21.000",
+      "kategori": "Minuman dingin"
+    },
+    {
+      "nama": "Es Jeruk",
+      "harga_online": "Rp 8.000",
+      "kategori": "Minuman dingin"
+    },
+    {
+      "nama": "Jeruk Hangat",
+      "harga_online": "Rp 6.000",
+      "kategori": "Minuman hangat"
+    },
+    {
+      "nama": "Teh Hangat",
+      "harga_online": "Rp 5.000",
+      "kategori": "Minuman hangat"
+    }
+  ],
+  "faq": [
+    { "q": "Apa jam bukanya?", "a": "Jam buka 07:30 sampai 17:00." },
+    { "q": "Ada layanan antar?", "a": "Ya, tersedia di GoFood dan GrabFood." }
+  ]
+}
