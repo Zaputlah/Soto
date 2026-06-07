@@ -61,8 +61,39 @@ function setLoading(loading) {
   }
 }
 
+function updateChatbotViewport() {
+  if (!chatbotPanel) return;
+
+  const viewport = window.visualViewport;
+  const viewportHeight = viewport ? viewport.height : window.innerHeight;
+  const viewportTop = viewport ? viewport.offsetTop : 0;
+  const keyboardOpen = window.innerWidth <= 768 &&
+    viewportHeight < window.innerHeight - 120;
+
+  chatbotPanel.style.setProperty(
+    "--chat-viewport-height",
+    `${Math.round(viewportHeight)}px`,
+  );
+  chatbotPanel.style.setProperty(
+    "--chat-viewport-top",
+    `${Math.round(viewportTop)}px`,
+  );
+  chatbotPanel.classList.toggle("chatbot-keyboard-open", keyboardOpen);
+
+  if (
+    keyboardOpen &&
+    chatbotMessages &&
+    document.activeElement === chatbotInput
+  ) {
+    window.requestAnimationFrame(() => {
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    });
+  }
+}
+
 function openChatbot() {
   if (!chatbotPanel) return;
+  updateChatbotViewport();
   chatbotPanel.classList.add("chatbot-open");
   chatbotPanel.setAttribute("aria-hidden", "false");
   if (chatbotToggle) {
@@ -70,7 +101,10 @@ function openChatbot() {
     chatbotToggle.classList.add("is-panel-open");
   }
   window.setTimeout(() => {
-    if (chatbotInput) chatbotInput.focus();
+    if (chatbotInput) {
+      chatbotInput.focus();
+      updateChatbotViewport();
+    }
   }, 120);
 }
 
@@ -82,6 +116,7 @@ function closeChatbot() {
     chatbotToggle.setAttribute("aria-expanded", "false");
     chatbotToggle.classList.remove("is-panel-open");
   }
+  chatbotPanel.classList.remove("chatbot-keyboard-open");
 }
 
 function normalize(s) {
@@ -1968,6 +2003,22 @@ if (chatbotInput)
       sendUserMessage();
     }
   });
+if (chatbotInput) {
+  chatbotInput.addEventListener("focus", () => {
+    window.setTimeout(updateChatbotViewport, 80);
+  });
+  chatbotInput.addEventListener("blur", () => {
+    window.setTimeout(updateChatbotViewport, 120);
+  });
+}
+window.addEventListener("resize", updateChatbotViewport);
+window.addEventListener("orientationchange", () => {
+  window.setTimeout(updateChatbotViewport, 150);
+});
+if (window.visualViewport) {
+  window.visualViewport.addEventListener("resize", updateChatbotViewport);
+  window.visualViewport.addEventListener("scroll", updateChatbotViewport);
+}
 document.addEventListener("keydown", (event) => {
   if (
     event.key === "Escape" &&

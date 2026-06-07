@@ -631,6 +631,7 @@ ul {
     min-height: 0;
     padding: 20px 17px 16px;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
     background:
         linear-gradient(180deg, rgba(248, 242, 232, 0.82), rgba(255, 253, 249, 0.96)),
@@ -856,10 +857,12 @@ ul {
 
 @media (max-width: 480px) {
     .chatbot-panel {
+        top: calc(var(--chat-viewport-top, 0px) + 8px);
         right: 8px;
-        bottom: 8px;
+        bottom: auto;
         width: calc(100vw - 16px);
-        height: calc(100dvh - 16px);
+        height: calc(var(--chat-viewport-height, 100dvh) - 16px);
+        max-height: calc(var(--chat-viewport-height, 100dvh) - 16px);
         min-height: 0;
         border-radius: 22px;
     }
@@ -898,8 +901,38 @@ ul {
     }
 
     .chatbot-composer {
+        position: relative;
+        z-index: 3;
         padding-right: 14px;
         padding-left: 14px;
+        padding-bottom: max(6px, env(safe-area-inset-bottom));
+    }
+
+    .chatbot-panel.chatbot-keyboard-open {
+        border-radius: 18px;
+    }
+
+    .chatbot-panel.chatbot-keyboard-open .chatbot-header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .chatbot-panel.chatbot-keyboard-open .chatbot-avatar {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .chatbot-panel.chatbot-keyboard-open .chatbot-eyebrow,
+    .chatbot-panel.chatbot-keyboard-open .chatbot-profile-copy p,
+    .chatbot-panel.chatbot-keyboard-open .chatbot-suggestions,
+    .chatbot-panel.chatbot-keyboard-open .chatbot-note {
+        display: none;
+    }
+
+    .chatbot-panel.chatbot-keyboard-open .chatbot-messages {
+        padding-top: 12px;
+        padding-bottom: 10px;
     }
 
     .chatbot-send {
